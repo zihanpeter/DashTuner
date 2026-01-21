@@ -19,10 +19,10 @@ import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 
 import java.util.Locale;
 
-class PIDF {
+class DashTunerPIDF {
     public double kP, kI, kD, kF;
 
-    PIDF(int kP, int kI, int kD, int kF) {
+    DashTunerPIDF(int kP, int kI, int kD, int kF) {
         this.kP = kP;
         this.kI = kI;
         this.kD = kD;
@@ -41,11 +41,11 @@ public class DashTuner extends OpMode {
     public static boolean[] isPositionCloseLoop = new boolean[4];
     public static boolean[] isVelocityCloseLoop = new boolean[4];
 
-    public static PIDF[] PIDFs = {
-            new PIDF(0, 0, 0, 0),
-            new PIDF(0, 0, 0, 0),
-            new PIDF(0, 0, 0, 0),
-            new PIDF(0, 0, 0, 0)
+    public static DashTunerPIDF[] PIDFs = {
+            new DashTunerPIDF(0, 0, 0, 0),
+            new DashTunerPIDF(0, 0, 0, 0),
+            new DashTunerPIDF(0, 0, 0, 0),
+            new DashTunerPIDF(0, 0, 0, 0)
     };
 
     DcMotorEx[] motors = new DcMotorEx[4];
